@@ -4,6 +4,8 @@
   font-family: "Poppins";
   --primary: #db4444;
   scroll-behavior: smooth;
+ 
+  
 }
 @tailwind base;
 @tailwind components;
@@ -12,8 +14,9 @@
 .container-x {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
-  padding: 50px;
+  max-width: 1400px;
+  padding: 25px;
+  
 }
 
 .S_Underline:after {
@@ -61,16 +64,46 @@
 }
 .box {
 
-  padding: 57px 110px 10px 46px;
-  border-radius: 128px 0px 0px 0px;
-  border-top: 2px solid #db4444;
+  padding: 25px 50px 0px 25px;
+  border-radius: 158px 0px 0px 50px;
+  border-top: 2px solid #000000;
   border-right: 0px;
   border-bottom: 0px;
   border-left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #db4444;
+  color: #020202;
   margin: auto;
   padding: auto;
+}
+@media (max-width: 300px) {
+  .product-card {
+    width: 32%;  /* Adjust this percentage for even smaller product cards */
+  }
+}
+/* Default for small screens (2 items per row, each item has max width of 320px) */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  gap: 16px; /* Adjust the gap between items */
+}
+
+.product-card {
+  max-width: 320px; /* Ensure product cards don't exceed 320px on small screens */
+  width: 2  0%; /* Ensure the card takes up full width of its grid cell */
+}
+
+/* For medium screens (>= 768px) - 3 items per row */
+@media (min-width: 768px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+/* For large screens (>= 1024px) - 4 items per row */
+@media (min-width: 1024px) {
+  .product-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  }
 }

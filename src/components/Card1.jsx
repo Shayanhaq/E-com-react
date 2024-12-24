@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import iPhone from "../assets/image/iphone.png";
 
 let heroLink = [
   { name: "Women's Fashion" },
@@ -17,6 +18,7 @@ export default function Hero() {
   const [selectedCategory, setSelectedCategory] = useState(""); 
 
   return (
+    
     <div className="flex justify-center items-center px-4 py-6">
       <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6">
 
@@ -49,12 +51,12 @@ export default function Hero() {
         </div>
 
   
-        <div className="lg:w-3/4 w-full bg-black text-white rounded-md p-8 flex flex-col lg:flex-row items-center lg:items-start">
+        <div className=" w-full bg-black text-white rounded-md p-8 flex flex-col lg:flex-row items-center lg:items-start">
           
           <div className="flex-1 space-y-6">
             <div className="flex items-center gap-4">
               <img
-                src="https://s3-alpha-sig.figma.com/img/1126/a357/e5011a6f245df4c38eae015c7c9ccbe7?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mgFdjuikyJs7e6JGiYMfhCTEwtMJFEbqT-cNiMnTQ6Kr0c-QbPBuBgztOA0n76KgwsHi68YsDwFmYkElf8e~5jYqP5uKbBnloBHgGT6jP5XK9x9GaIF-XXBSc~udD3crxkxzxKSA9QWCl3hg2HDTwZacFtm95DEbq1c9tz5VgOUg1HtwlEru5I4vuwuYxMtzxrBQGry8PwCmfGcXdxlbKB-5Yb9Xh9gi4QnBaw5P2LcDl1BKWJ1krTrfPwltH7LYvZh8eyFf87Dfo-Ej9~WeR2r3khA7o1uHfzNPp1JwwY96tQnrlfJyDgnMqmofVYGYgFOfGnJxsxZjSlOWxA8Ojw__"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAxCAYAAACoJ+s+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZlLSFRRGMe/UUdTa3oREQQ9oChTCdKEWhYRrQoiWhQtWgXtWhi4MjCCbJObahFUZGFRuwihEpSy0KaHpCSFktaMjPnWGedx+p2JkRmde2ey8kzQD47nzj3n3PO/3/3Odx6K/OcnSqndpCuRSKSDfI9kCtPT0zsQ1a4S2SeZQDAYPIO4yCxxivu7xDThcLgKLeHZ4rjfR1YgJhkZGdmfxHAxgfViEjQ4EPdZWeD3+zeJSUKh0FErcZRdFdMg4n4ycVj1g8fjKRTT4GPjScR1Tk1NrRfTuN3uZbO0jRBSqskXyTzJkT+I0+kMkTWTPHzqVzk5Ode5911+A0c6lUZHR1fm5uZW5OXllfFzsQ4hWVlZr7lucjgcXru2bW1tztLS0hLqHaHNWpK2ZohneLBsy+TkZJPL5fLJfGCaKsMSd3lY2GZkPiM70d3dvSq+rc/n2xkIBGoo9ygb9MtS5zZ1t6QtbHBw0IWzXyRNqzShkyliXOPExMQ1/O6jVaC2ERogO5tSHJXyqPxYGQKj1Iqd6yHuoTKItjwhqSqmJyteHOprcOaDYhA06PXijTkF3NyIep8yCIOyeXh4eHlS5Th5nTII/X9qbW11JRXX1dW1BOsNKkPwWRVhqUKsIAYdUgah/0dW2qKDhCmpXAzC7FJrWab/8BIlYgj6HsBAz63KowIJLUViCEaul/79VuUxgUvFEIxeZVceC9TZYgj8z3ZFFfPBgBiCJZzeBliKjFnwmxgC91prtx2ICsTM78UQCMyl/2NW5VGBOGqPGCQ7O/t0Q0OD9ThA4HFlGKa7S5YCvV7vauoElWFYyZyyFMkbvFWGQUOETVRlvK74BesdMYyOifn5+RdYWd0bGhpap+/NxB+mnO3MiS/1qJIMAIN2IrhoxoLse9+QvZAMIXZMl7AnwbR1kgFgPb0EvKWvEwQSjx5Q+E4Mg6Fu4mq9+jpBIDf1tu+8GAQDTRCXa2wrMWBalCHwvcuSirGxsWIsOakWGPrs0QdVkg6cr1SqBUSfKIyPj++VdKGNA19oUAsEO7tq+VX0Lp+2bvWX4Ws1Wp1fpzzApP0akj6o3GxXj0/kx8HbSb3MADo6bCVslZIcKZ7fzLMPkwZkvmhL8rnrrd6ec8ED/f39c/571NHRsYLzwpOId1u0PUfmtOs7rSPgGISfciyiN/n603/h99OCgoK+dNpSv5hsG2028Ix+fO5JYWHhV/nX+QFx7OVpx5sHEQAAAABJRU5ErkJggg=="
                 alt="iPhone 14"
                 className="w-12 h-12"
               />
@@ -71,9 +73,9 @@ export default function Hero() {
 
           <div className="flex-shrink-0 mt-6 lg:mt-0">
             <img
-              src="https://s3-alpha-sig.figma.com/img/dc40/ba89/7215f42e5883a64157f0aa3a4d1a866a?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PHJ6w0GEEd~982wPgcgkyKGMmkpByMD0kDNVXEEenvCedyJkaOBH62-gFrbQAYCJq8z4NzYnGCbtaj-nXGBdsZurn2cuAz0HOtYyBhs~Tx8z96oOxxE29Y-7W2Ym6cI1jm1JcS4vHBxNIoHier0pH7hxMoe1il8lZrfBcJaKBs3z5pArRd4qRWq8NjfiEzrZNiHVLonas-l0isH7UWmQfeVlPq-o5iLlf4I5jKsmX2anPlgru~RVA5s6wwvnFR2KW8xge81SFwj-cFs3KTMHzYiKDQB81sKGp1QvXDS83eDg9U8RrumHMfM68fF2wUZGunbi5QY2me6qPCULSibFlw__"
+              src={iPhone}  width={400}
               alt="iPhone"
-              className="w-full max-w-xs lg:max-w-md"
+              className="max-w-xs lg:max-w-md"
             />
           </div>
         </div>

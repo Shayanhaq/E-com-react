@@ -5,7 +5,7 @@ import img4 from "../assets/image/perfume.png";
 
 export default function NewArrivalGrid() {
   return (
-<div className="main grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 S_Underline ">
+<div className="main grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 S_Underline m-12">
   <div className="bg-[#0D0D0D] relative text-gray-200 rounded col-span-1 lg:col-span-2 lg:row-span-2 overflow-hidden">
     <img
       className="object-contain w-full h-full transition-transform transform hover:scale-105 cursor-pointer"

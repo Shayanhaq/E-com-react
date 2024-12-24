@@ -12,13 +12,15 @@ import Footer from "../components/Footer";
 import Catogory from "../components/Catogory";
 import Card1 from "../components/Card1";
 import { Link } from "react-router-dom";
-export default function Home() {
+export default function Home({darkMode}) {
+  
+  
   return (
-    <div className="">
+    <div className= {`container-x transition-colors duration-300  ${ darkMode ?" bg-slate-900" : ""}`} >
           
           <Card1 />
           <SectionTitle text="Today's" />
-          <h3 className="heading m-4">Flash Sales</h3>
+          <h3 className={`heading m-4 ${darkMode ? "text-white" : ""}`}>Flash Sales</h3>
           
           <div class="flex gap-7 font-medium text-xs m-4">
             
@@ -31,20 +33,20 @@ export default function Home() {
 
 
           <SectionTitle text="Categories" />
-          <h3 className="heading m-4">Browse By Category</h3>
+        <h3 className={`heading m-4 ${darkMode ? "text-white" : ""}`}>Browse By Category</h3>
 <Catogory/>
   {/* todo */}
           <SectionTitle text="This Month" />
 
           <div className="flex justify-between my-10">
-        <h3 className="heading m-4">Best Selling Products</h3>
+        <h3 className={`heading m-4 ${darkMode ? "text-white" : ""}`}>Best Selling Products</h3>
         <Link to={"/Product"} className="mx-12 h-14 w-40 font-medium rounded bg-primary center text-white">View All</Link>
         
       </div>
 <Slider2 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center my-8 bg-"/>
 
           <SectionTitle text="Our Prudects" />
-          <h3 className="heading m-4">Explore Your Product</h3>
+          <h3 className={`heading m-4 ${darkMode ? "text-white" : ""}`}>Explore Your Product</h3>
       <div className="">
       <Product />
 </div>
@@ -52,7 +54,7 @@ export default function Home() {
           
           <SectionTitle text="Featured" />
 
-          <h3 className="heading m-4">New Arrival</h3>
+          <h3 className={`heading m-4 ${darkMode ? "text-white" : ""}`}></h3>
           <NewArrivalGrid />
 
 

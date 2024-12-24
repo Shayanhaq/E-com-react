@@ -8,8 +8,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from './ProductCard';
 
 function Slider() {
+  
   return (
-    <div className="my-8 px-4 md:px-8 lg:px-16  shadow-xl shadow-red-500/40">
+    <div className="my-8 px-4 md:px-8 lg:px-16  shadow-xl shadow-black-500/40">
       <Swiper
         spaceBetween={20}
         modules={[Navigation, Pagination, Autoplay]}

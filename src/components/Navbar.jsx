@@ -5,6 +5,9 @@ import { FaHeart, FaShoppingCart, FaRegUser } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { IoMoonSharp } from "react-icons/io5";
+import { MdOutlineLightMode } from "react-icons/md";
+
 
 const links = [
    { title: "Home", link: "/" },
@@ -12,14 +15,15 @@ const links = [
    { title: "Contect", link: "/contect" },
 ];
 
-export default function Navbar() {
+export default function Navbar({darkMode,setDarkMode}) {
+
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  const isLoggedIn = false ;
+  const isLoggedIn = true ;
 
   const navLinkStyle = "capitalize hover:underline cursor-pointer hover:text-primary";
 
   return (
-    <div className='h-28 relative flex justify-around items-center'>
+    <div className={`h-28 relative flex justify-around transition-colors duration-300 ${ darkMode ?" bg-slate-900" : ""} items-center`}>
       <img src="https://dynamic.design.com/asset/logo/2a2b0531-f004-4e9e-afe7-88abde57444e/logo-search-grid-1x?logoTemplateVersion=2&v=638434245537230000&text=Hash" alt="Logo" height={60} width={60} className=' rounded-full '/>
 
       <div className='bg-[#f5f5f5] rounded flex justify-around items-center w-60 h-10 px-2'>
@@ -56,7 +60,7 @@ export default function Navbar() {
       )}
 
      
-<ul className='hidden md:flex gap-3'>
+<ul className={`hidden md:flex gap-3 ${darkMode ? "text-white" : ""}`}>
         {links.map((item, i) => (
           <li key={i} className='hover:bg-primary px-3 py-0 transition-all duration-300 ease-in-out rounded-r-full'>
             <Link to ={item.link}>{item.title}</Link>
@@ -72,10 +76,27 @@ export default function Navbar() {
       </ul>
 
       <div className='flex items-center gap-3 text-2xl'>
+
+        <button
+
+        
+        
+        onClick={() => {
+           setDarkMode(!darkMode);
+          }}
+          className= {`${darkMode ? "text-white" : ""} transition-colors duration-100000`}
+        >
+          {darkMode ? <MdOutlineLightMode /> :<IoMoonSharp />  }
+        </button>
+
+
+        
+
+
         {isLoggedIn && (
           <>
-            <FaHeart />
-            <FaShoppingCart />
+            <FaHeart  className = {`${darkMode ? "text-white" : ""}` }/>
+            <FaShoppingCart className = {`${darkMode ? "text-white" : ""}` }/>
           </>
         )}
         

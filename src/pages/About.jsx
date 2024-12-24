@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 
-export default function AboutUsPage() {
+export default function AboutUsPage({ darkMode }) {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-8">
+    <div
+      className={`flex flex-col md:flex-row items-center gap-8 transition-colors duration-300 ${
+        darkMode ? "bg-slate-900 text-white" : "bg-white text-black"
+      }`}
+    >
       {/* Image Section */}
       <div className="flex-1 m-3">
         <img
@@ -15,31 +19,53 @@ export default function AboutUsPage() {
       {/* Text Section */}
       <div className="flex-1">
         <h1 className="text-4xl font-bold text-red-500">About Us</h1>
-        <p className="mt-4 text-gray-600">
+        <p className={`mt-4 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
           We are passionate about what we do. Since our inception, we've been
           driven by the goal of providing the best products and services to our
           customers.
         </p>
         <div className="mt-6">
           <h2 className="text-2xl font-semibold text-red-500">Our Values</h2>
-          <ul className="list-disc list-inside mt-2 text-gray-600">
+          <ul
+            className={`list-disc list-inside mt-2 ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             <li>Customer-centric approach</li>
             <li>Integrity and transparency</li>
             <li>Innovation and creativity</li>
           </ul>
         </div>
-        <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <div className="flex-1 p-4 bg-white rounded-lg shadow">
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 ">
+          <div
+            className={`flex-1 p-4 rounded-lg shadow transition-colors duration-300 ${
+              darkMode ? "bg-gray-800" : "bg-white"
+            }`}
+          >
             <h3 className="text-xl font-semibold text-red-500">10+</h3>
-            <p className="text-gray-600">Years of Experience</p>
+            <p className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+              Years of Experience
+            </p>
           </div>
-          <div className="flex-1 p-4 bg-white rounded-lg shadow">
+          <div
+            className={`flex-1 p-4 rounded-lg shadow transition-colors duration-300 ${
+              darkMode ? "bg-gray-800" : "bg-white"
+            }`}
+          >
             <h3 className="text-xl font-semibold text-red-500">1M+</h3>
-            <p className="text-gray-600">Happy Customers</p>
+            <p className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+              Happy Customers
+            </p>
           </div>
-          <div className="flex-1 p-4 bg-white rounded-lg shadow">
+          <div
+            className={`flex-1 p-4 rounded-lg shadow transition-colors duration-300 ${
+              darkMode ? "bg-gray-800" : "bg-white"
+            }`}
+          >
             <h3 className="text-xl font-semibold text-red-500">50+</h3>
-            <p className="text-gray-600">Awards Won</p>
+            <p className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+              Awards Won
+            </p>
           </div>
         </div>
       </div>
@@ -54,15 +80,14 @@ function ModernDesign() {
       <div className="max-w-screen-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">We Lead with Innovation</h2>
         <p className="text-xl mb-6">
-          Our team is dedicated to creating cutting-edge solutions that make a real impact on the world.
+          Our team is dedicated to creating cutting-edge solutions that make a
+          real impact on the world.
         </p>
         <button className="px-6 py-3 bg-red-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all">
           Get Started
         </button>
-       
       </div>
-       <Footer />
+      <Footer />
     </div>
-    
   );
 }
