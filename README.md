@@ -1,1 +1,1 @@
-https://e-comm-app-sh.netlify.app/
+https://e-comm-app2.netlify.app/
